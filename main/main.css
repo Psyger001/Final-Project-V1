@@ -1,0 +1,153 @@
+/* Styles */
+@import "/styles/header.css";
+@import "/styles/intro.css";
+@import "/styles/about.css";
+@import "/styles/product.css";
+@import "/styles/service.css";
+@import "/styles/client.css";
+@import "/styles/Insta.css";
+@import "/styles/footer.css";
+
+
+/* Import Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* CSS variables (custom properties) */
+:root {
+  --primary-color: #dcd7f8;
+  --text-dark: #3f3b57;
+  --text-light: #908ca3;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* CSS reset browser default spacing and make layout sizing easier */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Media Query: responsive design */
+@media (width > 540px) {
+  .header__content h1 {
+    font-size: 4.5rem;
+    line-height: 5rem;
+  }
+
+  .header__content h1 span {
+    font-size: 6rem;
+  }
+
+  .intro__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    position: static;
+    padding: 2rem 1rem;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .nav__header {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__logo a {
+    font-size: 1.5rem;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    position: static;
+    padding: 0;
+    flex-direction: row;
+    justify-content: flex-end;
+    background-color: transparent;
+    transform: none;
+  }
+
+  header {
+    padding-top: 0;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+
+  .header__content {
+    grid-area: 1/2/2/3;
+  }
+
+  .header__content :is(h4, .header__btn button) {
+    margin-inline-start: unset;
+  }
+
+  .header__content :is(h1, h2) {
+    text-align: left;
+  }
+
+  .header__content p {
+    max-width: 400px;
+    text-align: left;
+  }
+
+  .header__image img {
+    max-width: 500px;
+  }
+
+  .intro__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .about__row { /* this code mao ni nag patakilid sa img */
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .about__row:nth-child(4) {
+    flex-direction: row-reverse;
+  }
+
+  .about__image {
+    max-width: unset;
+    margin-inline: auto;
+  }
+
+  .about__content {
+    text-align: left;
+  } /* end diri */
+
+  .product__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+/* Media Query End */
