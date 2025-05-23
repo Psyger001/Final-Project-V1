@@ -82,6 +82,10 @@ ScrollReveal().reveal(".service__card", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".footer__col", {
+interval: 500,
+});
+
 const swiper = new Swiper(".swiper", { /* mao js niya para mo ika drag nimo mo slide */
   slidesPerView: 3,
   spaceBetween: 20,
